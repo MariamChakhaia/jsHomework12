@@ -5,7 +5,7 @@ let visIcons = document.querySelectorAll(".icons");
 let password1 = document.getElementById("password-input");
 let password2 = document.getElementById("password-input2");
 let email = document.getElementById("email-input");
-
+let username = document.getElementById("username-input");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -101,3 +101,24 @@ function emailValidation() {
 }
 
 email.addEventListener("keyup", emailValidation);
+
+function usernameValidation() {
+  let usernameValue = document.getElementById("username-input").value;
+  let usernamePattern = /^[0-9A-Za-z]{6,16}$/;
+  let usernameError = document.getElementById("error-username");
+
+  if (usernameValue.match(usernamePattern)) {
+    usernameError.innerText = "Your Username is Valid";
+    usernameError.style.color = "green";
+  } else {
+    usernameError.innerText =
+      "Username must contain only letters and numbers, and it must be between 6 and 16 characters long";
+    usernameError.style.color = "red";
+  }
+
+  if (usernameValue === "") {
+    usernameError.innerText = "";
+  }
+}
+
+username.addEventListener("keyup", usernameValidation);
