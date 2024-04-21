@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 30%;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input input {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: pink;
+    padding: 5px;
+    font-size: 15px;
+    position: relative;
+    width: 100%;
+}
+
+form label{
+    padding: 5px;
+}
+
+.input2{
+    padding: 5px;
+}
+
+#signup{
+    padding: 10px 15px;
+    background-color: rgb(242, 124, 143);
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+p {
+    color: red;
+}
+
+.icon+input{
+    width: 282px;
+    
+}
+
+#icon1, #icon {
+    cursor: pointer;
+    font-size: 20px;
+    width:10%;
+    float: right;
+    position: relative;
+    top: -25px;
+    z-index: 2;
+} 
